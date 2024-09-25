@@ -15,7 +15,7 @@ class BookActions extends StatelessWidget {
           ElevatedButton(
             
             style: ElevatedButton.styleFrom(
-              fixedSize:const Size( 150, 48),
+              fixedSize:const Size( 130, 48),
               backgroundColor: Colors.white,
               padding: const EdgeInsets.only(
                 top: 15,
@@ -39,7 +39,7 @@ class BookActions extends StatelessWidget {
           ElevatedButton(
             
             style: ElevatedButton.styleFrom(
-                          fixedSize:const Size( 150, 48),
+                          fixedSize:const Size( 130, 48),
       
               backgroundColor: const Color(0xffEF8262),
               padding: const EdgeInsets.only(
