@@ -7,15 +7,13 @@ class BookActions extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-
       padding: const EdgeInsets.symmetric(horizontal: 8.0),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           ElevatedButton(
-            
             style: ElevatedButton.styleFrom(
-              fixedSize:const Size( 130, 48),
+              fixedSize: const Size(130, 48),
               backgroundColor: Colors.white,
               padding: const EdgeInsets.only(
                 top: 15,
@@ -37,24 +35,19 @@ class BookActions extends StatelessWidget {
             ),
           ),
           ElevatedButton(
-            
             style: ElevatedButton.styleFrom(
-                          fixedSize:const Size( 130, 48),
-      
-              backgroundColor: const Color(0xffEF8262),
-              padding: const EdgeInsets.only(
-                
-                top: 15,
-                bottom: 15,
-                
-              ),
-              shape: const RoundedRectangleBorder(
-                borderRadius: BorderRadius.only(
-                  topRight: Radius.circular(16),
-                  bottomRight: Radius.circular(16),
+                fixedSize: const Size(130, 48),
+                backgroundColor: const Color(0xffEF8262),
+                padding: const EdgeInsets.only(
+                  top: 15,
+                  bottom: 15,
                 ),
-              )
-            ),
+                shape: const RoundedRectangleBorder(
+                  borderRadius: BorderRadius.only(
+                    topRight: Radius.circular(16),
+                    bottomRight: Radius.circular(16),
+                  ),
+                )),
             onPressed: () {},
             child: Text(
               'Free preview',

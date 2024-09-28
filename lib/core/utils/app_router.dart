@@ -9,7 +9,7 @@ import 'package:go_router/go_router.dart';
 abstract class AppRouter {
   static const kHomeView = '/homeView';
   static const kBookDetailsView = '/bookDetailsView';
-    static const kSearchView = '/searchView';
+  static const kSearchView = '/searchView';
 
   static final router = GoRouter(
     routes: [
@@ -18,25 +18,25 @@ abstract class AppRouter {
         builder: (context, state) => const SplashView(),
       ),
       GoRoute(
-        path: kHomeView,
-        pageBuilder: (context, state) {
-          return  CustomTransitionPage(
-            transitionDuration:  kPrimaryDuration,
-            child: const HomeView(),
-            transitionsBuilder: (context, animation, secondaryAnimation, child) {
-              return FadeTransition(
-                opacity:CurveTween(curve: Curves.easeIn).animate(animation),
-                child: child,
-              );
-            },
-          );
-        }
-      ),
-       GoRoute(
+          path: kHomeView,
+          pageBuilder: (context, state) {
+            return CustomTransitionPage(
+              transitionDuration: kPrimaryDuration,
+              child: const HomeView(),
+              transitionsBuilder:
+                  (context, animation, secondaryAnimation, child) {
+                return FadeTransition(
+                  opacity: CurveTween(curve: Curves.easeIn).animate(animation),
+                  child: child,
+                );
+              },
+            );
+          }),
+      GoRoute(
         path: kBookDetailsView,
         builder: (context, state) => const BookDetailsView(),
       ),
-       GoRoute(
+      GoRoute(
         path: kSearchView,
         builder: (context, state) => const SearchView(),
       ),
