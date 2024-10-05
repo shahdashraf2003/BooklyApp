@@ -1,5 +1,4 @@
 import 'package:bookly_app/core/utils/styles.dart';
-import 'package:bookly_app/features/home/presentation/views/widgets/book_list_view_item.dart';
 import 'package:bookly_app/features/search/presentation/views/widget/custom_search_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -46,7 +45,10 @@ class SerachResultListView extends StatelessWidget {
       itemBuilder: (context, index) {
         return const Padding(
           padding: EdgeInsets.symmetric(horizontal: 30, vertical: 10),
-          child: BookListViewItem(),
+          child: Text('Harry Potter and the Goblet of Fire'),
+          // child: BookListViewItem(
+
+          // ),
         );
       },
     );
