@@ -27,7 +27,7 @@ class FeaturedListView extends StatelessWidget {
                     left: 15,
                     bottom: 10,
                   ),
-                  child: CustomLBookImage(imageUrl:state.books[index].volumeInfo.imageLinks.thumbnail,),
+                  child: CustomLBookImage(imageUrl:state.books[index].volumeInfo.imageLinks?.thumbnail??'',),
                 );
               },
             ),
