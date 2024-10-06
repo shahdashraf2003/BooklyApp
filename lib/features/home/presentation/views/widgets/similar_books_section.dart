@@ -10,10 +10,8 @@ class SimilarBooksSection extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        const Expanded(
-          child: SizedBox(
-            height: 50,
-          ),
+        const SizedBox(
+          height: 50,
         ),
         Text(
           'You can also like',
