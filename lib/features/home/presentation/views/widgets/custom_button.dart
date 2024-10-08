@@ -1,8 +1,11 @@
 import 'package:bookly_app/core/utils/styles.dart';
+import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:flutter/material.dart';
 
 class BookActions extends StatelessWidget {
-  const BookActions({super.key});
+  const BookActions({super.key,  required this.onPressed, required this.book});
+  final void Function()? onPressed;
+  final BookModel book;
 
   @override
   Widget build(BuildContext context) {
@@ -48,7 +51,7 @@ class BookActions extends StatelessWidget {
                     bottomRight: Radius.circular(16),
                   ),
                 )),
-            onPressed: () {},
+            onPressed: onPressed,
             child: Text(
               'Free preview',
               style: Styles.textStyle16.copyWith(

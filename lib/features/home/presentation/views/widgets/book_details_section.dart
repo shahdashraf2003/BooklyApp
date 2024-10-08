@@ -4,6 +4,7 @@ import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_book_image.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class BookDetailsSection extends StatelessWidget {
   const BookDetailsSection({super.key, required this.book});
@@ -50,7 +51,16 @@ class BookDetailsSection extends StatelessWidget {
         const SizedBox(
           height: 37,
         ),
-        const BookActions(),
+        BookActions(
+          onPressed: () async {
+            final Uri uri = Uri.parse(book.volumeInfo.previewLink!);
+
+            if (await canLaunchUrl(uri)  ) {
+              await launchUrl(uri);
+            }
+          },
+          book: book,
+        ),
       ],
     );
   }
