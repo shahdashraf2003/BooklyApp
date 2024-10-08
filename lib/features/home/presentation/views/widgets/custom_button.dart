@@ -3,7 +3,7 @@ import 'package:bookly_app/features/home/data/models/book_model/book_model.dart'
 import 'package:flutter/material.dart';
 
 class BookActions extends StatelessWidget {
-  const BookActions({super.key,  required this.onPressed, required this.book});
+  const BookActions({super.key, required this.onPressed, required this.book});
   final void Function()? onPressed;
   final BookModel book;
 
@@ -30,7 +30,7 @@ class BookActions extends StatelessWidget {
             ),
             onPressed: () {},
             child: Text(
-              '19.99€',
+              'Free',
               style: Styles.textStyle18.copyWith(
                 color: Colors.black,
                 fontFamily: 'Montserrat',
@@ -53,7 +53,7 @@ class BookActions extends StatelessWidget {
                 )),
             onPressed: onPressed,
             child: Text(
-              'Free preview',
+              getText(book),
               style: Styles.textStyle16.copyWith(
                 color: Colors.white,
               ),
@@ -62,5 +62,13 @@ class BookActions extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String getText(BookModel book) {
+    if (book.volumeInfo.previewLink == null) {
+      return 'Not Available';
+    } else {
+      return ' preview';
+    }
   }
 }

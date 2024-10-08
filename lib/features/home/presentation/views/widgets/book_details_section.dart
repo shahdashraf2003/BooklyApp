@@ -1,3 +1,4 @@
+import 'package:bookly_app/core/utils/functions/launch_url._function.dart';
 import 'package:bookly_app/core/utils/styles.dart';
 import 'package:bookly_app/features/home/data/models/book_model/book_model.dart';
 import 'package:bookly_app/features/home/presentation/views/widgets/book_rating.dart';
@@ -52,12 +53,8 @@ class BookDetailsSection extends StatelessWidget {
           height: 37,
         ),
         BookActions(
-          onPressed: () async {
-            final Uri uri = Uri.parse(book.volumeInfo.previewLink!);
-
-            if (await canLaunchUrl(uri)  ) {
-              await launchUrl(uri);
-            }
+          onPressed: ()  {
+            lunchCustomUrl(context, 'book.volumeInfo.previewLink');
           },
           book: book,
         ),
